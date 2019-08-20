@@ -3,4 +3,4 @@ set -e
 
 source config.sh
 
-megadf -u $USER --no-ask-password -p $PASS
+megadf -u $USER --no-ask-password -p $PASS $@

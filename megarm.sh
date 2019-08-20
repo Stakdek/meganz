@@ -3,4 +3,4 @@ set -e
 
 source config.sh
 
-megarm -u $USER --no-ask-password -p $PASS
+megarm -u $USER --no-ask-password -p $PASS $@

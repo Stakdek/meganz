@@ -3,4 +3,4 @@ set -e
 
 source config.sh
 
-megacopy -u $USER --no-ask-password -p $PASS
+megacopy -u $USER --no-ask-password -p $PASS $@
