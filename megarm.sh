@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
-source config.sh
+SCRIPT_PATH=$(dirname $(realpath -s $0))
+
+source $SCRIPT_PATH/config.sh
 
 megarm -u $USER --no-ask-password -p $PASS $@
