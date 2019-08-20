@@ -222,16 +222,16 @@ Download file from a "public" Mega link (doesn’t require login)
 Upload or download a directory tree
 
 ## OPTIONS
--r <remotepath>, --remote <remotepath>
+`-r <remotepath>, --remote <remotepath>`
   Remote directory path.
 
--l <path>, --local <path>
+`-l <path>, --local <path>`
   Local directory path.
 
--d, --download
+`-d, --download`
   Download files from the Mega.nz. The default is to upload.
 
--n, --dryrun
+`-n, --dryrun`
   Don’t perform any actual changes, just print what would be done.
 
 `--no-progress`
