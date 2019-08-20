@@ -1,0 +1,2 @@
+# meganz
+Use megatools
