@@ -1,5 +1,7 @@
 # meganz
 Megatools itself is cool but a bit cumbersome if you want to work automated.
+
+
 ## Why?
 Sometimes you want to make backups. Github would be great for that.
 But Github forbids anything bigger than 100mb.
@@ -13,6 +15,8 @@ Once you have uploaded large files, you can even make them shareable under the w
 
 # megadf.sh
 Show your cloud storage space usage/quota
+
+
 ## OPTIONS
 `--total`
   Show only total available space (free + used).
@@ -46,6 +50,7 @@ Show your cloud storage space usage/quota
 
 # megals.sh
 List all remote files
+
 
 ## OPTIONS
 `--export, -e`
@@ -82,6 +87,7 @@ List all remote files
 # megamkdir.sh
 Create remote directory
 
+
 ## OPTIONS
 `--reload`
   Reload filesystem cache
@@ -101,8 +107,11 @@ Create remote directory
 <contactemail>
   Valid email address of a contact you want to add.
 
+
+
 # megarm.sh
 Remove remote file or directory
+
 
 ## OPTIONS
 `--reload`
@@ -125,6 +134,7 @@ Remove remote file or directory
 
 # megaput.sh
 Upload individual files
+
 
 ## OPTIONS
 `--path <remotepath>`
@@ -158,6 +168,7 @@ Upload individual files
 # megaget.sh
 Download individual files
 
+
 ## OPTIONS
 `--path <path>`
   Local path to download to. If this path is a directory, files are placed into the directory. If this path doesn’t exist, and it’s parent directory does, the file will be downloaded to a
@@ -186,6 +197,7 @@ Download individual files
 
 # megadl.sh
 Download file from a "public" Mega link (doesn’t require login)
+
 
 ## OPTIONS
 `--path <path>`
@@ -220,6 +232,7 @@ Download file from a "public" Mega link (doesn’t require login)
 
 # megacopy.sh
 Upload or download a directory tree
+
 
 ## OPTIONS
 `-r <remotepath>, --remote <remotepath>`
