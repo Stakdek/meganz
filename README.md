@@ -17,16 +17,16 @@ Once you have uploaded large files, you can even make them shareable under the w
 `python sync_backup_to_mega.py` or `python sync_backup_to_mega.py --dryrun` to look what the script would do.
 The script is configured via config.py. There you have the following settings:
 * NUM_BACKUPS=4
-         * Number of backups that will be kept
+   * Number of backups that will be kept
 * BACKUP_NAME = 'Home'
-         * Name of the backup
-         * Will also later name the folder in mega.nz
+   * Name of the backup
+   * Will also later name the folder in mega.nz
 * REMOTE_DEST = '/Root/Backups/'
-         * Destination folder on mega.nz
+   * Destination folder on mega.nz
 * BACKUP_SRC = '~/'
-         * Defines which folder is to be backed up.
+   * Defines which folder is to be backed up.
 * PRE_SYNC_HOOK = '''
-         * There you can put a bash command in before starting syncing
+   * There you can put a bash command in before starting syncing
 
 The script will add backups until the maximum configured number is reached. The next time you run it, it will delete the oldest backup and replace it.
 
