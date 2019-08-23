@@ -1,6 +1,7 @@
 # meganz
 Megatools itself is cool but a bit cumbersome if you want to work automated.
 
+**You need to have an account in [mega.nz](https://mega.nz)**
 
 ## Why?
 Sometimes you want to make backups. Github would be great for that.
