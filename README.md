@@ -14,7 +14,11 @@ Once you have uploaded large files, you can even make them shareable under the w
 ## Requirements
 `sudo apt-get install megatools`
 
-# Using sync_backup_to_mega
+## Configuration
+In the config `config.sh` you have to set your username and password.
+For the config `config.py` see chapter **Using sync_backup_to_mega**
+
+## Using sync_backup_to_mega
 `python sync_backup_to_mega.py` or `python sync_backup_to_mega.py --dryrun` to look what the script would do.
 The script is configured via config.py. There you have the following settings:
 * NUM_BACKUPS=4
