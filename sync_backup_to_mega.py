@@ -7,6 +7,7 @@ import config
 
 dryrun = False
 
+
 def pre_sync_hook():
     '''
     '''
@@ -19,6 +20,7 @@ def pre_sync_hook():
         print('Done')
     return
 
+
 def get_remote_backups():
     '''
     '''
@@ -27,6 +29,7 @@ def get_remote_backups():
     res = subprocess.check_output('bash megals.sh -l ' + config.REMOTE_DEST, shell=True).strip()
     print('Done')
     return res
+
 
 def check_remote_backup(paths):
     '''
@@ -48,7 +51,8 @@ def sync_num_backup(num=0):
     print('Starting Syncing of ' + config.BACKUP_NAME + str(num))
     if not dryrun:
         subprocess.check_output('bash megals.sh --reload', shell=True)
-        subprocess.check_call('bash megamkdir.sh  ' + config.REMOTE_DEST + config.BACKUP_NAME + str(num), shell=True)
+        subprocess.check_call('bash megamkdir.sh  ' + config.REMOTE_DEST +
+                              config.BACKUP_NAME + str(num), shell=True)
         subprocess.check_call(
             'bash megacopy.sh -l ' +
             config.BACKUP_SRC +
@@ -57,7 +61,7 @@ def sync_num_backup(num=0):
             config.BACKUP_NAME +
             str(num),
             shell=True
-            )
+        )
     else:
         print('Would run bash megals.sh --reload')
         print('Would run bash megamkdir.sh  ' + config.REMOTE_DEST + config.BACKUP_NAME + str(num))
@@ -72,6 +76,7 @@ def sync_num_backup(num=0):
     print('Done')
     return
 
+
 def sync_dir_backup(dir):
     '''
     '''
@@ -80,16 +85,17 @@ def sync_dir_backup(dir):
         subprocess.check_output('bash megals.sh --reload', shell=True)
         subprocess.check_call('bash megarm.sh ' + dir, shell=True)
         subprocess.check_output('bash megals.sh --reload', shell=True)
-        subprocess.check_call('bash megamkdir.sh  '+ dir, shell=True)
+        subprocess.check_call('bash megamkdir.sh  ' + dir, shell=True)
         subprocess.check_call('bash megacopy.sh -l ' + config.BACKUP_SRC + ' -r ' + dir, shell=True)
     else:
         print('Would run bash megals.sh --reload')
         print('Would run bash megarm.sh ' + dir)
         print('Would run bash megals.sh --reload')
-        print('Would run bash megamkdir.sh  '+ dir)
+        print('Would run bash megamkdir.sh  ' + dir)
         print('Would run bash megacopy.sh -l ' + config.BACKUP_SRC + ' -r ' + dir)
     print('Done')
     return
+
 
 def get_oldest_backup(dirs):
     '''
@@ -100,7 +106,7 @@ def get_oldest_backup(dirs):
     for folder in dirs:
         if config.BACKUP_NAME in folder:
             folder = folder.split(' ')
-            folder = list(filter(None, folder)) # clear dat list
+            folder = list(filter(None, folder))  # clear dat list
             folders.append(folder)
     dates = {}
     for folder in folders:
@@ -108,6 +114,7 @@ def get_oldest_backup(dirs):
     oldest_folder = min(dates, key=dates.get)
     print('Done')
     return oldest_folder
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(

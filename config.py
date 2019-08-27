@@ -1,4 +1,4 @@
-NUM_BACKUPS=4
+NUM_BACKUPS = 4
 
 BACKUP_NAME = 'Home'
 
