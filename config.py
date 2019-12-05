@@ -1,9 +1,9 @@
-NUM_BACKUPS = 4
+NUM_BACKUPS=4
 
-BACKUP_NAME = 'Home'
+BACKUP_NAME = 'stakdek.de'
 
-REMOTE_DEST = '/Root/Backups/'
+REMOTE_DEST = '/Root/ZOPE_BKP/'
 
-BACKUP_SRC = '~/'
+BACKUP_SRC = '~/ZOPE_BKP'
 
-PRE_SYNC_HOOK = ''
+PRE_SYNC_HOOK = 'bash ~/update_backup_Zope.sh'
